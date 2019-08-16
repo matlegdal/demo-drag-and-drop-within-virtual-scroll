@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { moveItemInArray } from '@angular/cdk/drag-drop';
 import { Movie } from './movie/movie.model';
 import { Movable } from './Movable';
 
@@ -60,7 +60,7 @@ export class AppComponent {
     }
   ];
 
-  move(event:Movable) {
+  move(event: Movable) {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
     this.movies = [...this.movies]; // this seems necessary to trigger the change in *cdkVirtualFor or maybe just make another swap function
   }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { WithCdkComponent } from './with-cdk/with-cdk.component';
 import { WithScrollableComponent } from './with-scrollable/with-scrollable.component';
 import { MovieComponent } from './movie/movie.component';
+import { SortablejsModule } from 'ngx-sortablejs';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MovieComponent } from './movie/movie.component';
     BrowserModule,
     ScrollingModule,
     DragDropModule,
+    SortablejsModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent]
