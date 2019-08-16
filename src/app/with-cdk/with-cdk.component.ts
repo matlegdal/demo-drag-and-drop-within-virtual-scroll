@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { Movie } from '../movie/movie.model';
+import { Movable } from '../Movable';
 
 @Component({
   selector: 'app-with-cdk',
@@ -10,4 +11,5 @@ import { Movie } from '../movie/movie.model';
 export class WithCdkComponent {
   @Input() movies: Movie[];
   @Output() dropped: EventEmitter<CdkDragDrop<string[]>> = new EventEmitter();
+  @Output() orderChanged: EventEmitter<Movable> = new EventEmitter();
 }

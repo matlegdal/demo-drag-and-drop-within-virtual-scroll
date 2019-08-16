@@ -1,5 +1,5 @@
 <div style="text-align:center">
   <h1>Drag and Drop inside of a virtual scroll</h1>
 </div>
-<app-with-cdk [movies]="movies" (dropped)="dropCdk($event)"></app-with-cdk>
+<app-with-cdk [movies]="movies" (dropped)="move($event)" (orderChanged)="move($event)"></app-with-cdk>
 <app-with-scrollable></app-with-scrollable>
