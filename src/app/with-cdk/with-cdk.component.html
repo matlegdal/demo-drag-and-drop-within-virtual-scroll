@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>With CDK</h2>
+  <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport example-list" cdkDropList (cdkDropListDropped)="dropped.emit($event)">
+    <app-movie *cdkVirtualFor="let movie of movies" cdkDrag [movie]="movie" class="example-item" ></app-movie>
+  </cdk-virtual-scroll-viewport>
+</div>
