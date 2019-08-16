@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Movie } from '../movie/movie.model';
-import { Movable } from '../Movable';
 
 @Component({
   selector: 'app-with-scrollable',
@@ -59,16 +58,4 @@ export class WithScrollableComponent {
       year: 2017,
     }
   ];
-
-  sortableOptions = {
-    draggable: '.draggable',
-    handle: '.drag',
-    onMove: this.move,
-  };
-
-  move(e): boolean {
-    console.log(arguments);
-    return true;
-  }
-
 }
